@@ -1,0 +1,13 @@
+public class Palindrome {
+    public static boolean isPalindrome(int number) {
+        String numberStr = String.valueOf(number);
+        String reversedStr = new StringBuilder(numberStr).reverse().toString();
+        return numberStr.equals(reversedStr);
+    }
+    public static void main(String[] args) {
+        System.out.println(isPalindrome(121)); // true
+        System.out.println(isPalindrome(-121)); // false
+        System.out.println(isPalindrome(10)); // false
+        System.out.println(isPalindrome(11)); // true
+    }
+}
