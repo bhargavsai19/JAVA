@@ -1,0 +1,16 @@
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.Set;
+public class RemoveDuplicateElementsFromArray {
+    public static void main(String[] args) {
+        // Create an array with duplicate elements
+        int[] arr = {1, 2, 3, 4, 5, 1, 2, 3};
+        // Use a set to remove duplicate elements
+        Set<Integer> set = new LinkedHashSet<>();
+        set.addAll(Arrays.asList(arr));
+        // Convert the set back to an array
+        int[] newArr = set.toArray(new int[set.size()]);
+        // Print the new array
+        System.out.println(Arrays.toString(newArr));
+    }
+}
