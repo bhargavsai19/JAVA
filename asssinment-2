@@ -1,0 +1,31 @@
+public class PerfectNumbers {
+    public static void main(String[] args) {
+        int n = 5; // Change n to the desired number of perfect numbers to find
+        
+        int count = 0;
+        int num = 2; // Start checking from 2
+
+        while (count < n) {
+            if (isPerfect(num)) {
+                System.out.println(num);
+                count++;
+            }
+            num++;
+        }
+    }
+
+    public static boolean isPerfect(int number) {
+        int sum = 1; // Start with 1 as all numbers are divisible by 1
+
+        for (int i = 2; i * i <= number; i++) {
+            if (number % i == 0) {
+                sum += i;
+                if (i * i != number) {
+                    sum += number / i;
+                }
+            }
+        }
+
+        return sum == number;
+    }
+}
