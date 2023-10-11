@@ -1,0 +1,26 @@
+import java.util.Arrays;
+
+public class NthLargestNumber {
+    public static void main(String[] args) {
+        int[] array = {12, 45, 7, 23, 56, 89, 34, 8, 1};
+        int n = 3; // Change n to the desired value
+
+        int nthLargest = findNthLargest(array, n);
+
+        System.out.println("The " + n + "th largest number is: " + nthLargest);
+    }
+
+    public static int findNthLargest(int[] array, int n) {
+        // Check if n is within a valid range
+        if (n <= 0 || n > array.length) {
+            throw new IllegalArgumentException("Invalid value of n");
+        }
+
+        // Sort the array in descending order
+        Arrays.sort(array);
+        int arrayLength = array.length;
+
+        // The Nth largest number is at (arrayLength - n) index in the sorted array
+        return array[arrayLength - n];
+    }
+}
