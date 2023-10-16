@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class AddDigits {
+    public static void main(String[] args) {
+        // Create a scanner object to read input from the user.
+        Scanner scanner = new Scanner(System.in);
+        // Prompt the user to enter a number.
+        System.out.println("Enter a number: ");
+        // Read the number from the user.
+        int number = scanner.nextInt();
+        // Add the digits of the number together.
+        int sumOfDigits = 0;
+        while (number > 0) {
+            sumOfDigits += number % 10;
+            number /= 10;
+        }
+        // Print the sum of the digits.
+        System.out.println("The sum of the digits is: " + sumOfDigits);
+    }
+}
