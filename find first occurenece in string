@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class FindIndexOfFirstOccurrence {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Get the string from the user
+        System.out.println("Enter a string: ");
+        String str = scanner.nextLine();
+        // Get the character to search for
+        System.out.println("Enter the character to search for: ");
+        char ch = scanner.next().charAt(0);
+        // Find the index of the first occurrence of the character
+        int index = str.indexOf(ch);
+        // Print the index
+        System.out.println("The index of the first occurrence of the character is: " + index);
+    }
+}
