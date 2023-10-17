@@ -1,0 +1,14 @@
+import java.io.*;
+public class R192111090{
+    public static void main(String[] args){
+        int b=8;
+        int a=2;
+        double p= Math.log10(b)/Math.log10(a);
+        if(p-(int)p==0){
+            System.out.println("yes");
+        }
+        else
+            System.out.println("no");
+        
+    } 
+}
